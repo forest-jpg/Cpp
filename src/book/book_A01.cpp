@@ -1,0 +1,10 @@
+/* 整数Nが与えられるので、Nの2乗を返す */
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    cout << N * N << endl;
+    return 0;
+}

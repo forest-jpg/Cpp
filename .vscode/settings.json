@@ -14,4 +14,8 @@
         /* powershellのコマンドを外部化 */
         "cpp": "powershell -ExecutionPolicy Bypass -File \"run_cpp.ps1\""   /* 引数$fileはcode runnerが自動で渡す */
     },
+    "github.copilot.enable": {
+        "*": true,
+        "cpp": false,
+    },
 }

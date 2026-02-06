@@ -2,7 +2,7 @@
 #include <sstream>
 #include <string>
 
-#define main main_impl
+#define main main_impl_at_samples_112_a_iai
 #include "../src/AtCoder/samples/At_samples_112_A-iai.cpp"
 #undef main
 
@@ -17,7 +17,7 @@ std::string RunIO(const std::string& input) {
     std::cin.rdbuf(iss.rdbuf());
     std::cout.rdbuf(oss.rdbuf());
 
-    main_impl();
+    main_impl_at_samples_112_a_iai();
 
     std::cin.rdbuf(cin_buf);
     std::cout.rdbuf(cout_buf);

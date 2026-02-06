@@ -64,6 +64,28 @@ VSCodeで任意の`.cpp`ファイルを開き、右上の▶ボタンをクリ�
 powershell -ExecutionPolicy Bypass -File "run_cpp.ps1" -file "src/path/to/file.cpp"
 ```
 
+### 方法3: テストを実行
+
+GoogleTest を CMake 経由でビルドし、CTest で実行します。
+
+```powershell
+cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+cmake --build build
+ctest -V --test-dir build --output-on-failure
+```
+
+#### スクリプトで実行
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "run_tests.ps1"
+```
+
+詳細出力が必要な場合:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "run_tests.ps1" -VerboseOutput
+```
+
 ## コンパイルオプション
 
 - 標準: C++23 (GNU++23)

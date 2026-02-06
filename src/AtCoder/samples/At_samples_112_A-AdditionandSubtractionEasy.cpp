@@ -23,7 +23,7 @@ int main() {
     char op;
     cin >> A >> op >> B;
     
-    ll ans;
+    ll ans = 0;
     if (op == '+') ans = A + B;
     else if (op == '-') ans = A - B;
     cout << ans << "\n";

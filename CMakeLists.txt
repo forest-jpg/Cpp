@@ -13,6 +13,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     add_link_options(--coverage)
 endif()
 
-enable_testing()
-
+include(CTest)
+# enable_testing()  # CTest module is included, so this is not necessary
 add_subdirectory(tests)

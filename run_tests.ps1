@@ -42,11 +42,29 @@ try {
         # Extract test name pattern from filename (e.g., "at_samples_112_a_iai_test.cpp" -> "at_samples_112_a_iai")
         $filename = [System.IO.Path]::GetFileNameWithoutExtension($TestFile)
         $testNamePattern = $filename -replace '_test$', ''
-        ctest -R $testNamePattern --test-dir $buildDir --output-on-failure
+        ctest -R $testNamePattern --test-dir $buildDir --output-on-failure 
     } else {
         ctest --test-dir $buildDir --output-on-failure
     }
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+    # Generate lcov coverage file for VS Code coverage tools and CMake Tools
+    $gcovr = Get-Command gcovr -ErrorAction SilentlyContinue
+    if ($gcovr) {
+        # Generate lcov coverage file
+        $buildCoverage = Join-Path $buildDir "coverage.info"
+        gcovr -r . $buildDir --filter "^src/" --exclude-throw-branches --exclude-unreachable-branches --lcov -o $buildCoverage
+        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+        # Generate HTML coverage report for local viewing
+        $coverageDir = Join-Path $buildDir "coverage"
+        if (-not (Test-Path $coverageDir)) {
+            New-Item -ItemType Directory -Path $coverageDir | Out-Null
+        }
+        $buildCoverageReport = Join-Path $coverageDir "coverage.html"
+        gcovr -r . $buildDir --filter "^src/" --exclude-throw-branches --exclude-unreachable-branches --html-details $buildCoverageReport
+        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+    }
 }
 finally {
     # Restore original working directory

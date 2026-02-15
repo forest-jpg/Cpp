@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // N 人の研究者がおり、研究者には 1,2,…,N の番号が付けられています。
 // 研究者の間には M 個の利害関係があり、
 // i=1,2,…,M に対して研究者 Ai と研究者 Bi は互いに利害関係にあります。
@@ -60,16 +60,16 @@ int main() {
     int A[200005],B[200005];
 
     /* 入力 */
-    cin >> N >> M;
+    cin >> N >> M; // LCOV_EXCL_BR_LINE
     vector<ll> cnt_N(N + 1, N - 1);
     rep(i, M) {
-        cin >> A[i] >> B[i];
+        cin >> A[i] >> B[i]; // LCOV_EXCL_BR_LINE
         cnt_N[A[i]]--;
         cnt_N[B[i]]--;
     }
     
     rep(i, N) {
-        cout << combination(cnt_N[i + 1], 3) << " ";
+        cout << combination(cnt_N[i + 1], 3) << " "; // LCOV_EXCL_BR_LINE
     }
 
     return 0;

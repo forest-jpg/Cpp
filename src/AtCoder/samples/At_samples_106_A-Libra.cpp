@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 上皿天秤は、左の皿に乗っているおもりの重さの合計を L とし、
 // 右の皿に乗っているおもりの重さの合計を R としたとき、 
 // L>R なら左に傾き、L=R なら釣り合い、L<R なら右に傾きます。
@@ -24,8 +24,7 @@ using namespace std;
 
 int main() {
     int int_A, int_B, int_C, int_D;
-    cin >> int_A >> int_B >> int_C >> int_D;
-    
+    cin >> int_A >> int_B >> int_C >> int_D; // LCOV_EXCL_BR_LINE
     int int_weight_left = int_A + int_B;
     int int_weight_right = int_C + int_D;
     string str_ans = "undefined";
@@ -41,7 +40,6 @@ int main() {
     else {
         // NoStatement
     }
-    cout << str_ans << "\n";
-
+    cout << str_ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

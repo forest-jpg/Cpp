@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 高橋君は音楽プレイヤーを持っています。
 // はじめ、音量は 0 であり、曲は停止中です。
 // これから、Q 回の操作を順に行います。
@@ -37,9 +37,9 @@ int main() {
     bool is_play = false;
     int A[200005];
 
-    cin >> Q;
+    cin >> Q; // LCOV_EXCL_BR_LINE
     rep(i, Q) {
-        cin >> A[i];
+        cin >> A[i]; // LCOV_EXCL_BR_LINE
     }
     rep(i, Q) {
         switch (A[i]) {
@@ -53,8 +53,8 @@ int main() {
                 is_play ^= 1;
                 break;
         }
-        ((volume >= 3) && is_play) ? (cout << "Yes") : (cout << "No");
-        cout << "\n";
+        ((volume >= 3) && is_play) ? (cout << "Yes") : (cout << "No"); // LCOV_EXCL_BR_LINE
+        cout << "\n"; // LCOV_EXCL_BR_LINE
     }
 
     return 0;

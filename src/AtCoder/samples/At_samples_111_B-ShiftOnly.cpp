@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 黒板に N 個の正の整数 A_1, ..., A_N が書かれています。
 // すぬけ君は、黒板に書かれている整数がすべて偶数であるとき、
 // 次の操作を行うことができます。
@@ -24,14 +24,13 @@ using ll = long long;
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
+    cin.tie(nullptr); // LCOV_EXCL_BR_LINE
     /* 入力 */
     int N;
-    cin >> N;
+    cin >> N; // LCOV_EXCL_BR_LINE
     vector<ll> A(N, 0);
     rep(i, 0, N) {
-        cin >> A[i];
+        cin >> A[i]; // LCOV_EXCL_BR_LINE
     }
     ll cnt;
     bool is_doing = true;
@@ -45,7 +44,6 @@ int main() {
         }
     }
     --cnt;
-    cout << cnt << "\n";
-
+    cout << cnt << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

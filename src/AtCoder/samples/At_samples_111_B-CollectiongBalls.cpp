@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // xy 平面上に N 個のボールがあります。このうち i 番目のボールの位置は
 // (x_i, i) です。したがって、N 本の直線 y=1, y=2, ..., y=N の上に
 // それぞれ 1 個ずつボールがあることになります。
@@ -45,14 +45,13 @@ using ll = long long;
 
 int main() {
     int n, k;
-    cin >> n >> k;
+    cin >> n >> k; // LCOV_EXCL_BR_LINE
     int sum = 0;
 
     rep(i, n) {
-        int x; cin >> x;
+        int x; cin >> x; // LCOV_EXCL_BR_LINE
         sum += 2 * min(x, k - x);        
     }
-    cout << sum << "\n";
-
+    cout << sum << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

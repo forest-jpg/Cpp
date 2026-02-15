@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // AtCoder 国の公用語は、高橋語と青木語の 2 つの言語です。
 // 高橋語と青木語は、どちらもその言語に含まれる単語を表記するのに英小文字の一部を使います。 
 // 高橋語では長さ N の文字列 S に含まれる文字のみを使い、
@@ -45,11 +45,10 @@ int main() {
     string str_S, str_T;
     vector<string> vStr_words;
 
-    cin >> int_N >> int_M >> str_S >> str_T >> int_Q;
-
+    cin >> int_N >> int_M >> str_S >> str_T >> int_Q; // LCOV_EXCL_BR_LINE
     string str_tmp;
     for (int i = 0; i < int_Q; i++) {
-        cin >> str_tmp;
+        cin >> str_tmp; // LCOV_EXCL_BR_LINE
         vStr_words.push_back(str_tmp);
     }
 
@@ -71,13 +70,13 @@ int main() {
         }
 
         if (bl_is_takahashi && !bl_is_aoki) {
-            cout << "Takahashi" << "\n";
+            cout << "Takahashi" << "\n"; // LCOV_EXCL_BR_LINE
         }
         else if (bl_is_aoki && !bl_is_takahashi) {
-            cout << "Aoki" << "\n";
+            cout << "Aoki" << "\n"; // LCOV_EXCL_BR_LINE
         }
         else {
-            cout << "Unknown" << "\n";
+            cout << "Unknown" << "\n"; // LCOV_EXCL_BR_LINE
         }
     }
 

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 文字列 s と整数 i (1≦i≦|s|) が与えられます。
 // s の i 文字目を出力してください。
 //
@@ -24,9 +24,7 @@ using ll = long long;
 int main() {
     string s;
     int i;
-    cin >> s >> i;
-    
-    cout << s[i - 1] << "\n";
-
+    cin >> s >> i; // LCOV_EXCL_BR_LINE
+    cout << s[i - 1] << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

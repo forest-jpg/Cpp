@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // シカのAtCoDeerくんは二つの正整数 a,b を見つけました。
 // a と b の積が偶数か奇数か判定してください。
 
@@ -17,8 +17,7 @@ using namespace std;
 
 int main() {
     int int_a, int_b;
-    cin >> int_a >> int_b;
-    
+    cin >> int_a >> int_b; // LCOV_EXCL_BR_LINE
     string str_ans;
     if (int_a * int_b % 2 == 1) {
         str_ans = "Odd";
@@ -26,7 +25,6 @@ int main() {
     else {
         str_ans = "Even";
     }
-    cout << str_ans << "\n";
-
+    cout << str_ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

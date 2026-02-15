@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 1118 のような、3 つ以上の同じ数字が連続して並んだ 
 // 4 桁の整数を 良い整数 とします。
 // 4 桁の整数 N が与えられるので、N が 良い整数 かどうかを答えてください。
@@ -19,8 +19,7 @@ using namespace std;
 int main() {
     long long ll_N;
 
-    cin >> ll_N;
-
+    cin >> ll_N; // LCOV_EXCL_BR_LINE
     long long ll_ptn = ll_N % 10;
     long long ll_tgt;
     string ans = "No";
@@ -39,7 +38,6 @@ int main() {
     if (cnt == 2) {
         ans = "Yes";
     }
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

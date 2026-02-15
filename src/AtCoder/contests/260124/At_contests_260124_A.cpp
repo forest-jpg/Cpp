@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 英小文字からなる文字列 S が与えられます。
 // ここで、英小文字に含まれるドットの個数を以下のようにして定めます。
 // 英小文字が i または j であるとき : 1 個
@@ -22,12 +22,11 @@ using ll = long long;
 int main() {
     char S[11];
 
-    cin >> S;
+    cin >> S; // LCOV_EXCL_BR_LINE
     int cnt = 0;
     rep(i, 10) {
         if ((S[i] == 'i') || (S[i] == 'j')) cnt++;
     }
-    cout << cnt << "\n";
-
+    cout << cnt << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

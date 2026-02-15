@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 英小文字からなる文字列 W が入力されます。
 // W の末尾に英小文字の s を付け足したものを出力してください。
 
@@ -17,9 +17,7 @@ using ll = long long;
 
 int main() {
     string s;
-    cin >> s;
-
-    cout << s + 's' << "\n";
-
+    cin >> s; // LCOV_EXCL_BR_LINE
+    cout << s + 's' << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

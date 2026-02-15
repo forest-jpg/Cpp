@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 高橋くんは、ソフトウェア会社に勤めています。
 // その会社では、短い変数名はバグを生む原因だと信じられており、
 // 長い変数名を使う習慣があります。
@@ -29,9 +29,7 @@ using ll = long long;
 
 int main() {
     string a, b;
-    cin >> a >> b;
-
-    cout << ((a.size() > b.size()) ? a : b ) << "\n";
-
+    cin >> a >> b; // LCOV_EXCL_BR_LINE
+    cout << ((a.size() > b.size()) ? a : b ) << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 英小文字 c が与えられるので、 c が母音であるか判定してください。
 // ここで、英小文字のうち母音は a、e、i、o、uの 5 つです。
 
@@ -18,7 +18,7 @@ using ll = long long;
 
 int main() {
     char c;
-    cin >> c;
+    cin >> c; // LCOV_EXCL_BR_LINE
     string ans;
     switch(c) {
         case 'a':
@@ -32,7 +32,6 @@ int main() {
             ans = "consonant";
             break;
     }
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

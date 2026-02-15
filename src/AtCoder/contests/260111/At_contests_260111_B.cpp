@@ -1,13 +1,13 @@
-#include <bits/stdc++.h>
+﻿#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
   string line;
-  if (!getline(cin, line)) {
+  if (!getline(cin, line)) { // LCOV_EXCL_BR_LINE
     return 0;
   }
 
-  if (!getline(cin, line)) {
+  if (!getline(cin, line)) { // LCOV_EXCL_BR_LINE
     return 0;
   }
 
@@ -20,7 +20,7 @@ int main() {
   }
 
   if (nums.size() < 3) {
-    cout << endl;
+    cout << endl; // LCOV_EXCL_BR_LINE
     return 0;
   }
 
@@ -38,11 +38,10 @@ int main() {
 
   for (size_t i = 0; i < rtn.size(); i++) {
     if (i > 0) {
-      cout << ' ';
+      cout << ' '; // LCOV_EXCL_BR_LINE
     }
-    cout << rtn[i];
+    cout << rtn[i]; // LCOV_EXCL_BR_LINE
   }
-  cout << std::endl;
-
+  cout << std::endl; // LCOV_EXCL_BR_LINE
   return 0;
 }

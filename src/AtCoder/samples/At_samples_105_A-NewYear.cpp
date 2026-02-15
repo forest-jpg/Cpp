@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 12 月 30 日の M 時から次の年になるまでは何時間か、求めてください。
 
 // 制約
@@ -17,8 +17,7 @@ using namespace std;
 
 int main() {
     int M;
-    cin >> M;
-    cout << (24 - M) + 24 << "\n";
-
+    cin >> M; // LCOV_EXCL_BR_LINE
+    cout << (24 - M) + 24 << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

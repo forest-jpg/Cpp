@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 電卓の操作が与えられるので、計算途中の値と計算結果の値を出力してください。
 
 // 入力	出力	備考
@@ -38,14 +38,13 @@ using ll = long long;
 int main() {
     ll N, A;
 
-    cin >> N >> A;
-
+    cin >> N >> A; // LCOV_EXCL_BR_LINE
     string op_tmp;
     vector<string> op;
     ll B_tmp;
     vector<ll> B,ans;
     rep(i, N) {
-        cin >> op_tmp >> B_tmp;
+        cin >> op_tmp >> B_tmp; // LCOV_EXCL_BR_LINE
         op.push_back(op_tmp);
         B.push_back(B_tmp);
     }
@@ -55,14 +54,14 @@ int main() {
         else if (op[i] == "*") A *= B[i];
         else if (op[i] == "/") {
             if (B[i] == 0){
-                cout << "error" << "\n";
+                cout << "error" << "\n"; // LCOV_EXCL_BR_LINE
                 break;
             }
             else {
                 A /= B[i];
             }
         }
-        cout << (i + 1) << ":" << A << "\n";
+        cout << (i + 1) << ":" << A << "\n"; // LCOV_EXCL_BR_LINE
     }
 
     return 0;

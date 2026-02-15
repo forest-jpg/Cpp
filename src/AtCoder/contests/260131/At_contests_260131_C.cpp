@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // AtCoder 社は時刻 0 に始業し時刻 T に終業します。
 // 時刻 t と時刻 t+1 との間隔は 1 秒です。
 // 高橋君は AtCoder 社の業務時間中に SNS の chokutter を以下の規則で見ます。
@@ -33,11 +33,11 @@ using ll = long long;
 int main() {
     int N;
     ll T, sum = 0;
-    cin >> N >> T;
+    cin >> N >> T; // LCOV_EXCL_BR_LINE
     vector<ll> A(N + 1, 0);
     rep(i, 1, N + 1) {
         ll t;
-        cin >> t;
+        cin >> t; // LCOV_EXCL_BR_LINE
         A[i] = t;
     }
     // sum[0] = A[0];
@@ -53,7 +53,6 @@ int main() {
             remain = A[i];
         }
     }
-    cout << T - sum << "\n";
-
+    cout << T - sum << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // square1001 は、電光掲示板に整数 1 が表示されているのを見ました。
 // 彼は、電光掲示板に対して、以下の操作 A, 操作 B をすることができます。
 // 操作 A： 電光掲示板に表示する整数を「今の電光掲示板の整数を 2 倍にしたもの」に変える。
@@ -26,22 +26,18 @@ using ll = long long;
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
+    cin.tie(nullptr); // LCOV_EXCL_BR_LINE
     /* 一番スマート */
     int N, K;
-    cin >> N >> K;
-
+    cin >> N >> K; // LCOV_EXCL_BR_LINE
     int res = 1;
     for (int i = 0; i < N; i++) {
         res = min(res * 2, res + K);
     }
-    cout << res << endl;
-
+    cout << res << endl; // LCOV_EXCL_BR_LINE
     /* queueを使った解法 */
     // int N, K;
-    // cin >> N >> K;
- 
+    // cin >> N >> K; // LCOV_EXCL_BR_LINE
     // queue<int> que;
     // que.push(1);
  
@@ -62,10 +58,9 @@ int main() {
     //     int x = que.front(); que.pop();
     //     ans = min(ans, x);
     // }
-    // cout << ans << endl;
-
+    // cout << ans << endl; // LCOV_EXCL_BR_LINE
     // int N, K;
-    // cin >> N >> K;
+    // cin >> N >> K; // LCOV_EXCL_BR_LINE
     // vector<ll> ans(1030, 1024);
 
     /* 自分の回答 */
@@ -78,7 +73,6 @@ int main() {
     //     ans[i] = sum;
     // }
 
-    // cout << *min_element(ans.begin(), ans.end()) << "\n";
-
+    // cout << *min_element(ans.begin(), ans.end()) << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

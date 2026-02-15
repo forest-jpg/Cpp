@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+﻿#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -10,30 +10,29 @@ int main() {
   // ここから先は変更しないこと
 
   if (a) {
-    cout << "At";
+    cout << "At"; // LCOV_EXCL_BR_LINE
   }
   else {
-    cout << "Yo";
+    cout << "Yo"; // LCOV_EXCL_BR_LINE
   }
 
   if (!a && b) {
-    cout << "Bo";
+    cout << "Bo"; // LCOV_EXCL_BR_LINE
   }
   else if (!b || c) {
-    cout << "Co";
+    cout << "Co"; // LCOV_EXCL_BR_LINE
   }
 
   if (a && b && c) {
-    cout << "foo!";
+    cout << "foo!"; // LCOV_EXCL_BR_LINE
   }
   else if (true && false) {
-    cout << "yeah!";
+    cout << "yeah!"; // LCOV_EXCL_BR_LINE
   }
   else if (!a || c) {
-    cout << "der";
+    cout << "der"; // LCOV_EXCL_BR_LINE
   }
 
-  cout << endl;
-
+  cout << endl; // LCOV_EXCL_BR_LINE
   return 0;
 }

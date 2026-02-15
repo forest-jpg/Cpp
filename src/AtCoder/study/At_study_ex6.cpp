@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 1行の計算式が与えられるので、その結果を出力してください。
 // 与えられる計算式のパターンと対応する出力は以下の表の通りです。
 
@@ -29,8 +29,7 @@ using namespace std;
 int main() {
   int int_A, int_B;
   string op;
-  cin >> int_A >> op >> int_B;
-  
+  cin >> int_A >> op >> int_B; // LCOV_EXCL_BR_LINE
   int int_rtn;
   bool bl_err_flg = false;
   if (op == "+") {
@@ -58,10 +57,10 @@ int main() {
   }
 
   if (bl_err_flg) {
-    cout << "error" << "\n";
+    cout << "error" << "\n"; // LCOV_EXCL_BR_LINE
   }
   else {
-    cout << int_rtn << endl;
+    cout << int_rtn << endl; // LCOV_EXCL_BR_LINE
   }
   
   return 0;

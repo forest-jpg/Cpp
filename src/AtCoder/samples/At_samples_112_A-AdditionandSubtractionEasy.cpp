@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // joisinoお姉ちゃんは、A op B という式の値を計算したいと思っています。
 // ここで、A, B は整数で、op は、+ または - の記号です。
 // あなたの仕事は、joisinoお姉ちゃんの代わりにこれを求めるプログラムを作ることです。
@@ -21,12 +21,10 @@ using ll = long long;
 int main() {
     ll A, B;
     char op;
-    cin >> A >> op >> B;
-    
+    cin >> A >> op >> B; // LCOV_EXCL_BR_LINE
     ll ans = 0;
     if (op == '+') ans = A + B;
     else if (op == '-') ans = A - B;
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

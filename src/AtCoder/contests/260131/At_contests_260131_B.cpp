@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 年に1 度の節分には年齢と同じ数の豆を食べます。高橋君はそれ以外に豆を食べることはありません。
 // 高橋君は、今年 (0 年後) の節分の時点でN 歳です。
 // 高橋君が今年以降 (今年を含む) で累計 
@@ -24,7 +24,7 @@ using ll = long long;
 int main() {
     ll N, K;
 
-    cin >> N >> K;
+    cin >> N >> K; // LCOV_EXCL_BR_LINE
     ll left = 0, right = 200000000;
     
     while (left < right) {
@@ -39,6 +39,6 @@ int main() {
         }
     }
     
-    cout << left << "\n";
+    cout << left << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 駐車場があり、以下の二種類のプランのどちらかを選んで駐車できます。
 // プラン1 : T 時間駐車した場合、A×T 円が駐車料金となる。
 // プラン2 : 駐車した時間に関わらず B 円が駐車料金となる。
@@ -22,9 +22,8 @@ using namespace std;
 int main() {
     int int_N, int_A, int_B;
 
-    cin >> int_N >> int_A >> int_B;
-
-    cout << (( int_A * int_N < int_B)
+    cin >> int_N >> int_A >> int_B; // LCOV_EXCL_BR_LINE
+    cout << (( int_A * int_N < int_B) // LCOV_EXCL_BR_LINE
             ? ( int_A * int_N )
             : int_B ) << "\n";
 

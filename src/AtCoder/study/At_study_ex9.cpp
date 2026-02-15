@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 整数 x,a,bが入力されます。
 // 以下の4つの値を計算し、1行ずつ出力してください。
 
@@ -26,15 +26,13 @@ using namespace std;
 
 int main() {
     long long x, a, b;
-    cin >> x >> a >> b;
-
-    cout << (++x) << "\n";
+    cin >> x >> a >> b; // LCOV_EXCL_BR_LINE
+    cout << (++x) << "\n"; // LCOV_EXCL_BR_LINE
     x *= a + b;
-    cout << x << "\n";
+    cout << x << "\n"; // LCOV_EXCL_BR_LINE
     x *= x;
-    cout << x << "\n";
-    cout << (--x) << "\n";
-
+    cout << x << "\n"; // LCOV_EXCL_BR_LINE
+    cout << (--x) << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 
 }

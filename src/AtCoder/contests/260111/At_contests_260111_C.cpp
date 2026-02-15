@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+﻿#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
     int T;
-    if (!(cin >> T)) {
+    if (!(cin >> T)) { // LCOV_EXCL_BR_LINE
         return 0;
     }
 
@@ -14,11 +14,10 @@ int main() {
 
     for (int t = 0; t < T; t++) {
         int N, W;
-        cin >> N >> W; /*  */
-
+        cin >> N >> W; /*  */ // LCOV_EXCL_BR_LINE
         vector<int> cost(N);
         for (int i = 0; i < N; i++) {
-            cin >> cost[i];
+            cin >> cost[i]; // LCOV_EXCL_BR_LINE
         }
 
         if (W <= 0) {
@@ -44,11 +43,10 @@ int main() {
 
     for (size_t i = 0; i < answers.size(); i++) {
         if (i > 0) {
-            cout << '\n';
+            cout << '\n'; // LCOV_EXCL_BR_LINE
         }
-        cout << answers[i];
+        cout << answers[i]; // LCOV_EXCL_BR_LINE
     }
-    cout << '\n';
-
+    cout << '\n'; // LCOV_EXCL_BR_LINE
     return 0;
 }

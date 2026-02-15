@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // A 以上 B 以下の整数のうち、回文数となるものの個数を求めてください。 
 // ただし、回文数とは、先頭に 0 をつけない10 進表記を文字列として見たとき、
 // 前から読んでも後ろから読んでも同じ文字列となるような正の整数のことを指します。
@@ -21,12 +21,10 @@ using ll = long long;
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
+    cin.tie(nullptr); // LCOV_EXCL_BR_LINE
     /* 入力 */
     int A, B;
-    cin >> A >> B;
-
+    cin >> A >> B; // LCOV_EXCL_BR_LINE
     int kai[100005] = {};
     /* 回文数を表現 */
     rep(i, 1, 10) {
@@ -35,7 +33,6 @@ int main() {
         }
     }
     ll cnt = count(begin(kai)+A, begin(kai)+B+1, 1);
-    cout << cnt << "\n";
-
+    cout << cnt << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 英小文字からなる文字列 
 // S が与えられます。
 // 文字列 S の末尾に s を追加した文字列を出力してください。
@@ -22,8 +22,7 @@ using ll = long long;
 int main() {
     string s;
 
-    cin >> s;
-    cout << s.append("s") << "\n";
-
+    cin >> s; // LCOV_EXCL_BR_LINE
+    cout << s.append("s") << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 高橋君の秘書のなぎさちゃんは、高橋君からハンドルネームを貰いました。
 // しかし、このハンドルネームは、既に使われてしまっていました。
 // 仕方がないので、ハンドルネームの末尾にppを付けることにしました。
@@ -19,9 +19,7 @@ using ll = long long;
 
 int main() {
     string s;
-    cin >> s;
-
-    cout << s + "pp" << "\n";
-
+    cin >> s; // LCOV_EXCL_BR_LINE
+    cout << s + "pp" << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

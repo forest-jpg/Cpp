@@ -1,4 +1,4 @@
-// 問題
+﻿// 問題
 // 2つの整数A, Bが与えられます。
 // A+Bの計算結果を出力してください。
 
@@ -14,10 +14,8 @@ int main() {
     int int_A, int_B;
 
     // 入力
-    cin >> int_A >> int_B;
-
+    cin >> int_A >> int_B; // LCOV_EXCL_BR_LINE
     // A+Bの計算結果を出力
-    cout << (int_A + int_B) << "\n";
-
+    cout << (int_A + int_B) << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

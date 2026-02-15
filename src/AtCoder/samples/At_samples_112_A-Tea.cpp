@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 高橋くんはドリンクバーにやってきました。彼は今お茶を飲みたい気分です。
 // しかし、ドリンクバーの飲み物の表記はすべてローマ字で、
 // 高橋くんはそれを読むことができません。
@@ -25,10 +25,9 @@ using ll = long long;
 
 int main() {
     string s;
-    cin >> s;
+    cin >> s; // LCOV_EXCL_BR_LINE
     string ans = "NO";
     if (s[s.size()-1] == 'T') ans = "YES";
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

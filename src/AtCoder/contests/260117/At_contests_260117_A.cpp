@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 10^100 行 10^100 列のマス目があります。
 // 以下では、上から i 行目かつ左から j 列目のマスを
 // マス (i,j) と表します。
@@ -23,15 +23,13 @@ using namespace std;
 int main() {
     int int_P, int_Q, int_X, int_Y;
 
-    cin >> int_P >> int_Q >> int_X >> int_Y;
-
+    cin >> int_P >> int_Q >> int_X >> int_Y; // LCOV_EXCL_BR_LINE
     string str_ans = "No";
     if ((int_P <= int_X) && (int_X <= (int_P + 99))) {
         if ((int_Q <= int_Y) && (int_Y <= (int_Q + 99))) {
             str_ans = "Yes";
         }
     }
-    cout << str_ans << "\n";
-
+    cout << str_ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

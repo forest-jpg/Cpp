@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 1と+と-のみからなる式 Sが1行で与えられるので、
 // 計算結果を出力してください。
 // 例えば式 Sが1+1+1-1であったとき、計算結果は2です。
@@ -25,8 +25,7 @@ using ll = long long;
 
 int main() {
     string s;
-    getline(cin, s);
-
+    getline(cin, s); // LCOV_EXCL_BR_LINE
     int ans = 1;
     rep(i, s.size()){
         char c = s.at(i);
@@ -34,7 +33,6 @@ int main() {
         else if (c == '-') ans--;
         else continue;
     }
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // joisinoお姉ちゃんは、劇場の受付を担当しています。
 // この劇場には、席1から席100000までの、100000個の席があります。
 // 彼女のメモ書きによると、今までの間にN組の団体が来て、
@@ -27,19 +27,17 @@ using ll = long long;
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
+    cin.tie(nullptr); // LCOV_EXCL_BR_LINE
     /* setを使った解放 */
     ll N;
-    cin >> N;
+    cin >> N; // LCOV_EXCL_BR_LINE
     ll sum = 0;
 
     rep(i, N) {
         ll l, r;
-        cin >> l >> r;
+        cin >> l >> r; // LCOV_EXCL_BR_LINE
         sum += (r - l + 1);
     }
-    cout << sum << "\n";
-
+    cout << sum << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

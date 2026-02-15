@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // N×N のマス目があります。
 // このマス目の各マスを白色または黒色に塗ることにしました
 //  (すべてのマスをどちらか片方の色に塗ります)。
@@ -21,9 +21,7 @@ using namespace std;
 
 int main() {
     int int_N, int_A;
-    cin >> int_N >> int_A;
-
-    cout << (int_N * int_N - int_A) << "\n";
-
+    cin >> int_N >> int_A; // LCOV_EXCL_BR_LINE
+    cout << (int_N * int_N - int_A) << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

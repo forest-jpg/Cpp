@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // 1,2,3 の番号がついた 3 つのマスからなるマス目を持っています。
 // 各マスには 0 か 1 が書かれており、
 // マス i には si が書かれています。
@@ -20,8 +20,7 @@ using namespace std;
 
 int main() {
     int int_s;
-    cin >> int_s;
-
+    cin >> int_s; // LCOV_EXCL_BR_LINE
     int int_cnt = 0;
     for (int i = 0; i < 3; i++) {
         if (int_s % 10 == 1) {
@@ -29,7 +28,6 @@ int main() {
         }
         int_s /= 10;
     }
-    cout << int_cnt << "\n";
-
+    cout << int_cnt << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

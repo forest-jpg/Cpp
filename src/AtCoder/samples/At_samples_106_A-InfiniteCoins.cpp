@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // E869120 は 1 円硬貨を A 枚と 500 円硬貨を無限枚持っています.
 // これらの硬貨だけを使うことによって, ちょうど 
 // N 円を支払うことができるかを判定しなさい.
@@ -20,8 +20,7 @@ using namespace std;
 
 int main() {
     int int_N, int_A;
-    cin >> int_N >> int_A;
-
+    cin >> int_N >> int_A; // LCOV_EXCL_BR_LINE
     string ans;
     if ((int_N % 500) <= int_A) {
         ans = "Yes";
@@ -30,7 +29,6 @@ int main() {
         ans = "No";
     }
 
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

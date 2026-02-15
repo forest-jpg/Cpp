@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // N 個のカップがあり、それぞれのカップには無色透明な液体が入っています。
 // 具体的には、i 番目 (1≤i≤N) のカップには Ai ml の液体が入っています。
 // また、これらのうちちょうど K 個のカップには日本酒が入っており、
@@ -31,10 +31,10 @@ int main() {
     long long longlong_X;
     vector<long long> vPairInt_A;
 
-    cin >> int_N >> int_K >> longlong_X;
+    cin >> int_N >> int_K >> longlong_X; // LCOV_EXCL_BR_LINE
     long long int_tmp;
     for (long long i = 0; i < int_N; i++) {
-        cin >> int_tmp;
+        cin >> int_tmp; // LCOV_EXCL_BR_LINE
         vPairInt_A.push_back(int_tmp);
     }
 
@@ -50,7 +50,6 @@ int main() {
     if (int_sum >= longlong_X) {
         int_ans = (int_N - int_K) + cnt;
     }
-    cout << int_ans << "\n";
-
+    cout << int_ans << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

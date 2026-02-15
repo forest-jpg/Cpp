@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // A君はたこ焼きの情報を処理するプログラムを書いています。
 // このプログラムは以下の2パターンの入力を処理します。
 
@@ -41,18 +41,16 @@ using namespace std;
 int main() {
     long long p, price, N;
     string text;
-    cin >> p;
-
+    cin >> p; // LCOV_EXCL_BR_LINE
     switch (p) {
         case 1:
-            cin >> price >> N;
+            cin >> price >> N; // LCOV_EXCL_BR_LINE
             break;
         case 2:
-            cin >> text >> price >> N;
-            cout << (text + "!") << "\n";
+            cin >> text >> price >> N; // LCOV_EXCL_BR_LINE
+            cout << (text + "!") << "\n"; // LCOV_EXCL_BR_LINE
             break;
     }
-    cout << (N * price) << "\n";
-
+    cout << (N * price) << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

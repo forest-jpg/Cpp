@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // すぬけ君は、AtCoder s Contest という名前のコンテストを開こうとしています。
 // ここで、s は長さ 1 以上の文字列であり、
 // 1 文字目は英大文字、2 文字目以降は英小文字です。
@@ -26,8 +26,7 @@ using ll = long long;
 
 int main() {
     string s;
-    getline(cin, s);
-
+    getline(cin, s); // LCOV_EXCL_BR_LINE
     string ans = "A";
     rep(i, s.size()){
         if (s[i] == ' ') {
@@ -36,11 +35,9 @@ int main() {
             break;
         }
     }
-    cout << ans << "\n";
-
+    cout << ans << "\n"; // LCOV_EXCL_BR_LINE
     // string A, B, C;
-    // cin >> A >> B >> C;
-    // cout << "A" << B[0] << "C" << endl;
-
+    // cin >> A >> B >> C; // LCOV_EXCL_BR_LINE
+    // cout << "A" << B[0] << "C" << endl; // LCOV_EXCL_BR_LINE
     return 0;
 }

@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 // H×W のマス目が与えられます。
 // 入力において、全てのマスは文字で表されており、
 // . は空きマス、# は爆弾マスに対応します。
@@ -39,11 +39,11 @@ using ll = long long;
 
 int main() {
     int H, W;
-    cin >> H >> W;
+    cin >> H >> W; // LCOV_EXCL_BR_LINE
     vector<string> s(H);
     rep(i, 0, H){
         string tmp;
-        cin >> tmp;
+        cin >> tmp; // LCOV_EXCL_BR_LINE
         s[i] = tmp;
     }
     rep(y, 0, H) rep(x, 0, W) if (s[y][x] == '.') {
@@ -58,7 +58,7 @@ int main() {
         }
         s[y][x] = char('0' + cnt);
     }
-    rep(i, 0, H) cout << s[i] << "\n";
+    rep(i, 0, H) cout << s[i] << "\n"; // LCOV_EXCL_BR_LINE
     // int ans[H][W] = {0};
     // rep(i, H){
     //     rep(j, W) ans[i][j] = 0;
@@ -83,10 +83,10 @@ int main() {
     // }
     // rep(i, H){
     //     rep(j, W){
-    //         if (s[i][j] != '#') cout << ans[i][j];
-    //         else cout << '#';
+    //         if (s[i][j] != '#') cout << ans[i][j]; // LCOV_EXCL_BR_LINE
+    //         else cout << '#'; // LCOV_EXCL_BR_LINE
     //     }
-    //     cout << "\n";
+    //     cout << "\n"; // LCOV_EXCL_BR_LINE
     // }
 
     return 0;

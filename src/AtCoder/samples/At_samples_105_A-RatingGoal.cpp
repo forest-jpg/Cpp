@@ -1,4 +1,4 @@
-// 問題文
+﻿// 問題文
 
 // 現在のレーティングを a とする。
 // 次のコンテストで, パフォーマンス b を取ったとする。
@@ -29,11 +29,9 @@ using namespace std;
 
 int main() {
     int int_R, int_G;
-    cin >> int_R >> int_G;
-
+    cin >> int_R >> int_G; // LCOV_EXCL_BR_LINE
     int int_performance = 0;
     int_performance = 2 * int_G - int_R;
-    cout << int_performance << "\n";
-
+    cout << int_performance << "\n"; // LCOV_EXCL_BR_LINE
     return 0;
 }

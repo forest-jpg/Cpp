@@ -1,0 +1,10 @@
+// このファイルは有効にならないが、上書きしたキーバインディングの防備として作成
+[
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "run_cpp.ps1 \"${file}\"\u000D"
+    }
+  }
+]

@@ -1,0 +1,64 @@
+@startuml LearningProcess
+start
+
+partition "1. 観察学習フェーズ" {
+  :観察(Observe);
+  note right
+    ・熟練者の実践を観察
+    ・本・資料からベストプラクティスを学ぶ
+    ・正統的周辺参加（LPP）
+  end note
+
+  :実践(Try);
+  note right
+    ・自分でやってみる
+  end note
+
+  :フィードバック(Feedback);
+  note right
+    ・結果を確認し改善点を把握
+  end note
+
+  repeat
+    :観察→実践→FB のループ;
+  repeat while (改善が必要か？) is (Yes)
+
+  :暗黙知の形成;
+  note right
+    ・経験が身体化され「自分だけの知」が形成
+  end note
+}
+
+partition "2. SECBIフェーズ（SECI + Broadcast）" {
+  :Socialization（共同化）;
+  note right
+    ・暗黙知を周囲に共有
+    ・OJT、ペア作業、レビュー
+  end note
+
+  :Externalization（表出化）;
+  note right
+    ・議論で言語化・図式化
+    ・ノウハウの言語化
+  end note
+
+  :Combination（連結化）;
+  note right
+    ・形式知を統合しマニュアル化
+  end note
+
+  :Broadcast（全体展開）;
+  note right
+    ・組織全体に展開
+    ・Wiki、研修、共有会
+  end note
+
+  :Internalization（内面化）;
+  note right
+    ・メンバーが実践し技能化
+    ・LPP：熟練者と作業で加速
+  end note
+}
+
+stop
+@enduml

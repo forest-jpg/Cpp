@@ -10,7 +10,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-file(GLOB TEST_SOURCES "*_test.cpp")
+file(GLOB TEST_SOURCES CONFIGURE_DEPENDS "*_test.cpp")
 
 add_executable(all_tests ${TEST_SOURCES})
 target_link_libraries(all_tests gtest_main)
